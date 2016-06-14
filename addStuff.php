@@ -11,9 +11,7 @@ if (isset($_POST ['weight'])) {
     if (mysqli_connect_errno())
         die("Fail to connect to DB server: " . mysqli_connect_error());
 
-    echo $weight;
-    echo $height;
-    echo $bloodType;
+    
     
         $query = "INSERT INTO brief_desc (weight,height,blood_type,user_id) VALUES('" . $weight . "','" . $height . "','" . $bloodType . "','" . $id . "')";
         $res = mysqli_query($link, $query);
